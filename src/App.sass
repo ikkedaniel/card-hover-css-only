@@ -1,0 +1,14 @@
+.card
+    box-shadow: -1rem 0 3rem #000
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator
+.card:hover ~ .card
+    transform: translateX(130px)
+
+.card-author
+    grid-template-columns: 75px 1fr
+
+svg
+    width: 60px
+    stroke-width: 8
+    stroke-linecap: round
