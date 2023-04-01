@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker'
 import './Card.sass'
 
-export function Card() {
+function Card() {
   const date = faker.date.birthdate().toDateString()
   const description = faker.lorem.sentence(10)
   const avatar = faker.image.avatar()
@@ -32,3 +32,5 @@ export function Card() {
     </article>
   )
 }
+
+export default Card
