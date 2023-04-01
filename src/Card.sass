@@ -12,4 +12,7 @@ article
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator
 article:hover ~ article
-    transform: translateX(130px)
+    transform: translateX(8rem)
+
+article:not(:first-child)
+    margin-left: -8rem
