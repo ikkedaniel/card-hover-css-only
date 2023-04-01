@@ -2,17 +2,17 @@ import { faker } from '@faker-js/faker'
 import './Card.sass'
 
 export function Card() {
-  let date = faker.date.birthdate().toDateString()
-  let description = faker.lorem.sentence(10)
-  let avatar = faker.image.avatar()
-  let jobType = faker.name.jobType()
-  let name = faker.name.firstName()
+  const date = faker.date.birthdate().toDateString()
+  const description = faker.lorem.sentence(10)
+  const avatar = faker.image.avatar()
+  const jobType = faker.name.jobType()
+  const name = faker.name.firstName()
 
   return (
-    <article className="relative flex flex-col p-6 duration-200 ease-in-out w-80 group aspect-card bg-neutral-700 rounded-2xl hover:-translate-y-4">
+    <article className="relative flex flex-col p-6 duration-300 ease-in-out w-80 group aspect-card bg-slate-700 rounded-2xl hover:-translate-y-4">
       <header>
         <p>{date}</p>
-        <p className="mt-4 text-xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600">
+        <p className="mt-4 text-xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-br group-hover:from-purple-400 group-hover:to-pink-400">
           {description}
         </p>
       </header>
@@ -25,7 +25,7 @@ export function Card() {
         />
 
         <span>
-          <strong className="text-neutral-400">{jobType}</strong>
+          <strong className="text-slate-400">{jobType}</strong>
           <p>{name}</p>
         </span>
       </div>
