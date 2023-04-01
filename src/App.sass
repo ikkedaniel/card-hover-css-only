@@ -1,6 +1,15 @@
-.card
+// Hide scrollbar for Chrome, Safari and Opera
+body::-webkit-scrollbar
+    display: none
+
+// Hide scrollbar for IE, Edge and Firefox
+body
+    -ms-overflow-style: none // IE and Edge
+    scrollbar-width: none // Firefox
+
+article
     box-shadow: -1rem 0 3rem #000
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator
-.card:hover ~ .card
+article:hover ~ article
     transform: translateX(130px)

@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker'
 
 function Card() {
   return (
-    <article className="relative flex flex-col max-w-xs p-6 -ml-32 duration-200 ease-in-out group aspect-card bg-neutral-700 card rounded-2xl first:ml-0 hover:-translate-y-4">
+    <article className="relative flex flex-col p-6 -ml-32 duration-200 ease-in-out w-80 group aspect-card bg-neutral-700 rounded-2xl first:ml-0 hover:-translate-y-4">
       <header>
         <p>{faker.date.birthdate().toDateString()}</p>
         <p className="mt-4 text-2xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600">
@@ -24,11 +24,7 @@ function Card() {
 }
 
 function App() {
-  return (
-    <>
-      <section className="flex p-12 overflow-hidden">{Array(5).fill(<Card />)}</section>
-    </>
-  )
+  return <section className="absolute flex p-12">{Array(10).fill(<Card />)}</section>
 }
 
 export default App
